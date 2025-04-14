@@ -4,7 +4,8 @@ import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
-import ThemeToggleButton from "@/components/ThemeToggleButton"; // ADDED Import
+import ThemeToggleButton from "@/components/ThemeToggleButton";
+import FaviconUpdater from "@/components/FaviconUpdater"; // <-- Import FaviconUpdater
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 import "./globals.css";
@@ -16,8 +17,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kinectic South | Production",
-  description: "Portfolio for Kinectic, Production.",
+  title: "Kinectic South | Production", // Ensure Brand Name updated here too
+  description: "Portfolio for Kinectic, Production.", // Ensure Brand Name updated here too
 };
 
 export default function RootLayout({
@@ -29,31 +30,37 @@ export default function RootLayout({
       className={cn(inter.variable, "font-sans")}
       suppressHydrationWarning
     >
-      <head />
+      <head>
+        {/* Static Favicon Links */}
+        {/* Provide a default (e.g., light) and give it an ID */}
+        <link
+          id="dynamic-favicon" // ID for the updater component to find
+          rel="icon"
+          href="/logo_light.png" // Default icon shown initially
+          type="image/png"
+          sizes="66x64" // Your specified size
+        />
+        {/* You might add other sizes or apple-touch-icon here if needed */}
+      </head>
       <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem={false}
         >
-          <Header /> {/* z-30 */}
-          <Sidebar /> {/* z-20 */}
-          <div>{children}</div> {/* Renders page.tsx content */}
-          <div className="hidden md:block fixed bottom-0 left-16 right-0 h-px bg-black dark:bg-neutral-700 z-20" />{" "}
-          {/* Horizontal line */}
-          <Footer /> {/* z-10 (mobile only) */}
+          <Header />
+          <Sidebar />
+          <div>{children}</div>
+          <div className="hidden md:block fixed bottom-0 left-16 right-0 h-px bg-black dark:bg-neutral-700 z-20" />
+          <Footer />
           <div
             className="fixed top-0 right-0 h-screen w-px bg-black dark:bg-white z-40"
             aria-hidden="true"
-          />{" "}
-          {/* Right Edge Border */}
-          {/* --- ADDED: Fixed Theme Toggle Button --- */}
+          />
           <div className="fixed bottom-4 right-4 z-40">
-            {" "}
-            {/* Positioning container */}
             <ThemeToggleButton />
           </div>
-          {/* --- END: Fixed Theme Toggle Button --- */}
+          <FaviconUpdater /> {/* <-- Add the client component here */}
         </ThemeProvider>
       </body>
     </html>
