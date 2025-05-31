@@ -7,7 +7,7 @@ export default function Footer() {
       className="
         fixed bottom-0 left-0 z-10
         flex items-center
-        justify-start /* --- MODIFIED: Changed justify-end to justify-start --- */
+        justify-start
         w-full h-11
         border-t border-l
         border-black dark:border-neutral-700

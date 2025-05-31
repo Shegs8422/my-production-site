@@ -44,6 +44,7 @@ export default function ThemeToggleButton() {
 
   const isCurrentlyDark = resolvedTheme === "dark";
   const toggleTheme = () => {
+    console.log("Toggling theme");
     setTheme(isCurrentlyDark ? "light" : "dark");
   };
 

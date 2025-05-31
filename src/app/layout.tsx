@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import ThemeToggleButton from "@/components/ThemeToggleButton";
-import FaviconUpdater from "@/components/FaviconUpdater"; // <-- Import FaviconUpdater
+import FaviconUpdater from "@/components/FaviconUpdater";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 import "./globals.css";
@@ -17,8 +17,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kinectic South | Production", // Ensure Brand Name updated here too
-  description: "Portfolio for Kinectic, Production.", // Ensure Brand Name updated here too
+  title: "Kinectic South | Production",
+  description: "Portfolio for Kinectic, Production.",
 };
 
 export default function RootLayout({
@@ -32,17 +32,16 @@ export default function RootLayout({
     >
       <head>
         {/* Static Favicon Links */}
-        {/* Provide a default (e.g., light) and give it an ID */}
         <link
-          id="dynamic-favicon" // ID for the updater component to find
+          id="dynamic-favicon" // This is the link the server renders
           rel="icon"
-          href="/logo_light.png" // Default icon shown initially
+          href="/logo_light.png" // The server will always use this initially
           type="image/png"
-          sizes="66x64" // Your specified size
+          sizes="66x64"
         />
-        {/* You might add other sizes or apple-touch-icon here if needed */}
       </head>
-      <body>
+
+      <body className="bg-white dark:bg-black">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -60,7 +59,7 @@ export default function RootLayout({
           <div className="fixed bottom-4 right-4 z-40">
             <ThemeToggleButton />
           </div>
-          <FaviconUpdater /> {/* <-- Add the client component here */}
+          <FaviconUpdater />
         </ThemeProvider>
       </body>
     </html>
