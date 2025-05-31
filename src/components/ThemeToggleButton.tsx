@@ -53,6 +53,7 @@ export default function ThemeToggleButton() {
       aria-label={`Switch to ${isCurrentlyDark ? "light" : "dark"} mode`}
       type="button"
       onClick={toggleTheme}
+      data-theme={theme}
       className="
         group                    /* Enable group-hover */
         flex items-center        /* Align icon and text */
