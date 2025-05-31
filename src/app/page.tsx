@@ -9,13 +9,6 @@ import { client, urlFor } from "@/lib/sanityclient";
 import type { SanityProject, CreditItem } from "@/lib/types";
 import Lenis from "lenis";
 
-// --- Define CreditItem type ---
-interface CreditItem {
-  _key: string;
-  role?: string;
-  name?: string;
-}
-
 // --- Constants ---
 const DETAILS_PANEL_INITIAL_HEIGHT_MOBILE_PX = 200;
 const DETAILS_PANEL_INITIAL_HEIGHT_DESKTOP_PX = 180;
@@ -78,7 +71,6 @@ export default function Home() {
       orientation: "horizontal",
       gestureOrientation: "both",
       smoothWheel: true,
-      smoothTouch: false,
       lerp: 0.08,
       wheelMultiplier: 1.0,
       touchMultiplier: 1.5,
