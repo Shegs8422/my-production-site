@@ -2,7 +2,6 @@
 import { createClient, type SanityClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
-import { SanityClient } from "@sanity/client";
 
 // --- Configuration ---
 export const projectId =
