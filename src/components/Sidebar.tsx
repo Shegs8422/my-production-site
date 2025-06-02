@@ -1,3 +1,4 @@
+"use client";
 // src/components/Sidebar.tsx
 export default function Sidebar() {
   return (
@@ -7,15 +8,14 @@ export default function Sidebar() {
         fixed left-0 top-0
         w-16
         h-screen
-        /* --- MODIFIED BORDERS --- */
-        border-l border-r border-b /* Add left and bottom borders */
-        border-black                 /* Light mode border color (#000) */
-        dark:border-white            /* Dark mode border color (#fff) */
-        /* --- Translucency/Blur --- */
+        
+        border-l border-r border-b
+        border-black
+        dark:border-white            
+        
         bg-white/10 dark:bg-black/30
         backdrop-blur-lg
-        /* --- Positioning/Stacking --- */
-        z-20 /* Keep z-index */
+        z-20
         items-center justify-center
       `}
     >

@@ -151,10 +151,10 @@ export default function Home() {
           className="
             w-12 h-12 /* Size of the spinner */
             rounded-full /* Make it a circle */
-            border-4 border-solid /* Base border */
-            border-neutral-200 dark:border-neutral-700 /* Light border color */
-            border-t-black dark:border-t-white /* Color of the spinning segment */
-            animate-spin /* Apply the spin animation */
+            border-4 border-solid
+            border-neutral-200 dark:border-neutral-700
+            border-t-black dark:border-t-white 
+            animate-spin
           "
           role="status" // Accessibility role
           aria-label="Loading projects" // Accessibility label

@@ -31,22 +31,11 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Static Favicon Links */}
-        <link
-          id="dynamic-favicon" // This is the link the server renders
-          rel="icon"
-          href="/logo_light.png" // The server will always use this initially
-          type="image/png"
-          sizes="66x64"
-        />
+        {/* No favicon link here; handled by FaviconUpdater on client */}
       </head>
 
       <body className="bg-white dark:bg-black">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-        >
+        <ThemeProvider>
           <Header />
           <Sidebar />
           <div>{children}</div>
