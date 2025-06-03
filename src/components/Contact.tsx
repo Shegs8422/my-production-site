@@ -23,7 +23,6 @@ const Contact = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-16">
-      {/* Heading */}
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">
         <span className="text-neutral-400">Say Hi!</span>
         <span className="text-black dark:text-white">
@@ -32,11 +31,11 @@ const Contact = () => {
           <br className="hidden md:inline" /> about your idea
         </span>
       </h1>
-      {/* Subheading */}
+
       <p className="text-lg text-neutral-500 mb-12 max-w-xl">
-        Have a nice works? Reach out and let's chat.
+        Have a nice works? Reach out and let&#39;s chat.
       </p>
-      {/* Form */}
+
       <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col gap-8 md:col-span-2">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -84,7 +83,7 @@ const Contact = () => {
           </div>
           <div>
             <label className="block text-sm font-medium text-neutral-700 mb-4">
-              What's in your mind?*
+              What&#39;s in your mind?*
             </label>
             <div className="flex flex-wrap gap-3">
               {topics.map((topic) => {
@@ -111,7 +110,7 @@ const Contact = () => {
             className="inline-flex items-center px-8 py-3 rounded-full border border-neutral-900 dark:border-white bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold text-lg hover:bg-neutral-700 dark:hover:bg-neutral-200 transition"
           >
             Let's Talk
-            <span className="ml-2">→</span>
+            <span className="ml-2">&#8594;</span>
           </button>
         </div>
       </form>
