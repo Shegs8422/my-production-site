@@ -109,8 +109,7 @@ const Contact = () => {
             type="submit"
             className="inline-flex items-center px-8 py-3 rounded-full border border-neutral-900 dark:border-white bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold text-lg hover:bg-neutral-700 dark:hover:bg-neutral-200 transition"
           >
-            Let's Talk
-            <span className="ml-2">&#8594;</span>
+            Let&apos;s Talk
           </button>
         </div>
       </form>
